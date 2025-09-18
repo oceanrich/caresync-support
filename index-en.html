@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareSync - Your Caring Medication Companion | Smart Medication Management App Support Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">CareSync</div>
+            <ul>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#subscription">Subscription</a></li>
+                <li><a href="privacy-en.html">Privacy Policy</a></li>
+                <li class="language-switcher">
+                    <select onchange="switchLanguage(this.value)">
+                        <option value="en">English</option>
+                        <option value="zh-cn">简体中文</option>
+                        <option value="zh-hant">繁體中文</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>CareSync - Your Caring Medication Companion</h1>
+            <p class="hero-subtitle">Professional smart medication management app with AI technology and emotional design, providing comprehensive health care services</p>
+            <div class="hero-highlights">
+                <span class="highlight-item">🌍 6 Languages Support</span>
+                <span class="highlight-item">🤖 AI Smart Reminders</span>
+                <span class="highlight-item">🔒 Local Data Storage</span>
+                <span class="highlight-item">👥 Age-Friendly Design</span>
+            </div>
+        </section>
+
+        <section class="value-proposition">
+            <h2>Core Values</h2>
+            <div class="value-grid">
+                <div class="value-item">
+                    <div class="value-icon">🛡️</div>
+                    <h3>Smart Guardian</h3>
+                    <p>AI-driven personalized medication reminders and health management, learning your medication habits to provide optimal reminder times</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">💝</div>
+                    <h3>Emotional Companion</h3>
+                    <p>Warm interactive design and encouraging language, making medication management full of care as your thoughtful companion</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Age-Friendly</h3>
+                    <p>Specially optimized large fonts, high contrast interface, simple and intuitive operations suitable for all age groups</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🔐</div>
+                    <h3>Privacy Security</h3>
+                    <p>All data stored locally, OCR recognition processed locally, strictly protecting your health privacy information</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <h2>Powerful Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item featured">
+                    <h3>🏥 Smart Medication Management</h3>
+                    <p>Support multiple medication frequencies (1-3 times daily, weekly, monthly), medication category management, priority settings, personalized color and icon identification</p>
+                </div>
+                <div class="feature-item featured">
+                    <h3>📸 Photo OCR Recognition</h3>
+                    <p>Advanced local OCR technology supporting 6-language medication information recognition, protecting privacy while quickly entering medication information</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🤖 AI Smart Assistant</h3>
+                    <p>Learn your medication behavior patterns, predict optimal reminder times, provide personalized suggestions</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🌐 Multi-language Support</h3>
+                    <p>Intelligently detect system language, support Simplified Chinese, Traditional Chinese, English, Japanese, Korean, Spanish</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>🚀 How to get started with CareSync?</h3>
+                    <div class="faq-answer">
+                        <p>1. Download and install the CareSync app</p>
+                        <p>2. On first launch, the app will intelligently detect your system language</p>
+                        <p>3. Tap "Add Medication Reminder" to add your first medication</p>
+                        <p>4. Set medication time and frequency, save to start receiving smart reminders</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3>📸 How to use photo recognition feature?</h3>
+                    <div class="faq-answer">
+                        <p>1. Select "Photo Recognition" option when adding medication</p>
+                        <p>2. Point camera at text information on medicine box</p>
+                        <p>3. App will automatically recognize medication information</p>
+                        <p>4. Confirm information is correct and save</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3>🔒 Is my data secure?</h3>
+                    <div class="faq-answer">
+                        <p>Absolutely secure! CareSync uses complete local storage strategy:</p>
+                        <p>• All medication data stored locally on your device</p>
+                        <p>• OCR recognition completely processed locally</p>
+                        <p>• No account registration required</p>
+                        <p>• Your health privacy receives highest level protection</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <p>We are committed to providing you with the best medication management experience. If you have any questions or suggestions, please contact us:</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong> caresync@163.com
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CareSync. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function switchLanguage(lang) {
+            switch(lang) {
+                case 'zh-cn':
+                    window.location.href = 'index.html';
+                    break;
+                case 'zh-hant':
+                    window.location.href = 'index-zh-hant.html';
+                    break;
+                case 'en':
+                    window.location.href = 'index-en.html';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
