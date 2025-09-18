@@ -8,6 +8,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    font-size: 16px; /* 全龄友好：比标准稍大的字体 */
 }
 
 header {
@@ -31,7 +32,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #2E86AB; /* 守护蓝 */
 }
 
 nav ul {
@@ -42,8 +43,34 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #2c3e50;
+    color: #2E86AB; /* 守护蓝 */
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FF9800; /* 温暖橙 */
+}
+
+.language-switcher select {
+    background: #fff;
+    border: 2px solid #2E86AB;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    color: #2E86AB;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-switcher select:hover {
+    background: #2E86AB;
+    color: white;
+}
+
+.language-switcher select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 134, 171, 0.3);
 }
 
 main {
@@ -60,9 +87,43 @@ main {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem; /* 全龄友好：更大的标题 */
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: #2E86AB; /* 守护蓝 */
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-highlights {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.highlight-item {
+    background: linear-gradient(135deg, #2E86AB, #4CAF50);
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(46, 134, 171, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(46, 134, 171, 0.4);
 }
 
 .feature-grid {
@@ -73,25 +134,324 @@ main {
 }
 
 .feature-item {
-    padding: 1.5rem;
+    padding: 2rem;
     background: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
 }
 
-.feature-item h3 {
-    color: #2c3e50;
+.feature-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    border-left-color: #4CAF50;
+}
+
+.feature-item.featured {
+    background: linear-gradient(135deg, #fff, #f0f8ff);
+    border: 2px solid #2E86AB;
+    border-left: 4px solid #2E86AB;
+}
+
+/* 核心价值部分 */
+.value-proposition {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.value-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.value-item h3 {
+    color: #2E86AB;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.value-item p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* 功能展示部分 */
+.features {
+    margin: 4rem 0;
+}
+
+.features h2, .value-proposition h2 {
+    text-align: center;
+    color: #2E86AB;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
 }
 
+.feature-item h3 {
+    color: #2E86AB;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.feature-item ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    color: #666;
+}
+
+.feature-item li {
+    margin: 0.5rem 0;
+}
+
+/* 订阅计划部分 */
+.subscription-info {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #2E86AB, #4CAF50);
+    border-radius: 20px;
+    color: white;
+}
+
+.subscription-info h2 {
+    text-align: center;
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.subscription-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    color: #333;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-card.pro {
+    border: 3px solid #FF9800;
+    position: relative;
+}
+
+.plan-card.pro::before {
+    content: "推荐";
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #FF9800;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.plan-card h3 {
+    color: #2E86AB;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.plan-price {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-bottom: 2rem;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+}
+
+.plan-features li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+/* FAQ部分 */
+.faq {
+    margin: 4rem 0;
+    padding: 3rem 0;
+}
+
+.faq h2 {
+    text-align: center;
+    color: #2E86AB;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.faq-item {
+    margin: 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #4CAF50;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.faq-item h3 {
+    color: #2E86AB;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.faq-answer {
+    color: #666;
+    line-height: 1.6;
+}
+
+.faq-answer p {
+    margin: 0.8rem 0;
+}
+
+.faq-answer strong {
+    color: #FF9800;
+}
+
+/* 快速帮助部分 */
+.quick-help {
+    margin: 4rem 0;
+}
+
+.quick-help h2 {
+    text-align: center;
+    color: #2E86AB;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.help-item {
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid #4CAF50;
+}
+
+.help-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.help-item h3 {
+    color: #2E86AB;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.help-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #FF9800;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.help-link:hover {
+    color: #2E86AB;
+}
+
+/* 联系我们部分 */
 .contact {
     text-align: center;
     padding: 4rem 0;
+    background: #f8f9fa;
+    border-radius: 20px;
+    margin: 4rem 0;
+}
+
+.contact h2 {
+    color: #2E86AB;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    min-width: 250px;
 }
 
 .privacy-content {
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 100px; /* 增加上边距，避免被导航栏遮挡 */
+    padding: 2rem;
 }
 
 .privacy-content section {
@@ -99,12 +459,12 @@ main {
 }
 
 .privacy-content h1 {
-    color: #2c3e50;
+    color: #2E86AB;
     margin-bottom: 1rem;
 }
 
 .privacy-content h2 {
-    color: #2c3e50;
+    color: #2E86AB;
     margin: 1.5rem 0 1rem;
 }
 
@@ -122,54 +482,69 @@ footer {
 
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
-    .feature-grid {
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-grid, .value-grid, .help-grid, .faq-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .subscription-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-item {
+        min-width: auto;
+        width: 100%;
+        max-width: 300px;
     }
     
     main {
         padding: 1rem;
+        margin-top: 70px;
     }
-} 
-
-.faq {
-    margin: 4rem 0;
-}
-
-.faq-item {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.faq-item h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.faq-item ol {
-    margin-left: 1.5rem;
-    margin-top: 1rem;
-}
-
-.version {
-    margin: 4rem 0;
-    padding: 2rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-}
-
-.version ul {
-    margin-left: 1.5rem;
-    margin-top: 1rem;
+    
+    .privacy-content {
+        margin-top: 80px;
+        padding: 1rem;
+    }
+    
+    .value-proposition, .subscription-info, .contact {
+        margin: 2rem 0;
+        padding: 2rem 1rem;
+    }
+    
+    nav {
+        padding: 0.8rem 1rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    .language-switcher select {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 .privacy-content h3 {
-    color: #2c3e50;
+    color: #2E86AB;
     margin: 1rem 0;
     font-size: 1.1rem;
-} 
+}
